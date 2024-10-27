@@ -30,10 +30,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        "form-name": "contact", // This should match the form's name attribute
-        ...form,
-      }),
+      body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
         setLoading(false);
