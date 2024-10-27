@@ -25,29 +25,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    // Submit the form to Netlify
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        "form-name": "contact",
-        ...form,
-      }).toString(),
-    })
-      .then(() => {
-        setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        setLoading(false);
-        alert("Something went wrong. Please try again later.");
-      });
+    setForm({ name: "", email: "", message: "" });
+    alert("Thank you. I will get back to you as soon as possible.");
+    setLoading(false);
   };
 
   return (
