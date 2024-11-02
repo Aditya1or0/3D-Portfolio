@@ -2,7 +2,7 @@ import React from "react";
 import { Html, useProgress } from "@react-three/drei";
 
 const Loader = () => {
-  const { progress } = useProgress(); // Note the correct usage here
+  const { progress } = useProgress();
 
   return (
     <Html>
@@ -15,7 +15,7 @@ const Loader = () => {
           marginTop: 130,
         }}
       >
-        {progress.toFixed(2)}% {/* Use progress here */}
+        {progress.toFixed(2)}% {}
       </p>
     </Html>
   );

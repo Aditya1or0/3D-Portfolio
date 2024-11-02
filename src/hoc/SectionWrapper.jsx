@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles"; // Make sure this path is correct
-import { staggerContainer } from "../utils/motion"; // Ensure this is defined
+import { styles } from "../styles";
+import { staggerContainer } from "../utils/motion";
 
 const SectionWrapper = (Component, idName) => {
   return function HOC() {
